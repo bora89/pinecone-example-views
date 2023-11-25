@@ -1,6 +1,7 @@
 <h1 class="prose-xl font-bold">
 	Hello, <span x-text="$router.params?.name ?? 'what is your name?'"></span>
 </h1>
+<h2 x-data="$store.salutation" x-text="msg"></h2>
 <input
 	type="text"
 	@change="$router.redirect($event.target.value == 'home'? '/' : '/hello/'+$event.target.value)"
